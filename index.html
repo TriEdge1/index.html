@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriEdge Creator Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50 ; /* header background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+        }
+
+        .tabs button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .tabs button:hover {
+            background-color: #ddd;
+            border-radius: 8px;
+        }
+
+        .tabs button.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-image: url('tb1.jpg'); /* section background image */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .Creator-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .Creator-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.9); /* slightly transparent for bg image */
+        }
+
+        .progress-bar {
+            background-color: #ddd;
+            border-radius: 8px;
+            height: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            background-color: #4CAF50;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Full width employee card in Employees tab */
+        .Creator-card.full-width {
+            width: 100%;
+            text-align: left;
+        }
+
+        .Creator-card.full-width img {
+            border-radius: 8px 8px 0 0;
+        }
+        h2,h4 {
+            text-align: center;
+        }
+        h1,h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>TriEdge Creator Portal</h1>
+    </header>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'home')">Home</button>
+        <button class="tab-btn" onclick="openTab(event, 'Creator')">Creator</button>
+        <button class="tab-btn" onclick="openTab(event, 'EdgeCheck')">EdgeCheck</button>
+    </div>
+
+    <!-- Home Tab -->
+    <div id="home" class="tab-content active">
+        <h2>Welcome!</h2>
+        <h4>Manage employees, track progress, and provide wellness tips easily.</h4>
+
+        <div class="Creator-container">
+            <!-- Jane -->
+            <div class="Creator-card">
+                <img src="images/jane.jpg" alt="Jane Doe" width="100%">
+                <h3>Jane Doe</h3>
+                <p>Role: Developer</p>
+                <p>Badge Earned: 🏆 Productivity Star</p>
+                <p>Progress:</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+                <p class="aura">Aura Tip: Take short breaks every 2 hours to stay fresh!</p>
+            </div>
+
+            <!-- John -->
+            <div class="Creator-card">
+                <img src="images/john.jpg" alt="John Smith" width="100%">
+                <h3>John Smith</h3>
+                <p>Role: Designer</p>
+                <p>Badge Earned: 🎨 Creativity Badge</p>
+                <p>Progress:</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <p class="aura">Aura Tip: Keep your workspace tidy to boost creativity!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employees Tab -->
+    <div id="Creator" class="tab-content">
+        <h2>Creator</h2>
+
+        <!-- Full width employee card -->
+        <div class="Creator full-width">
+            <img src="c:\Users\sudhe\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\197E342C9FBAD962DBE6D3322F723CA6\WhatsApp Image 2025-08-31 at 11.21.08_d46a47a8.jpg" alt="Sam Wilson" width="10%" height="10%">
+            <h3>Sam Wilson</h3>
+            <p>Joinig Date: 08.08.2012</p>
+            <p>Role: Project Manager</p>
+            <p>Badge Earned: 🏅 Leadership Badge</p>
+            <p>Progress:</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%;"></div>
+            </div>
+            <p class="aura">Aura Tip: Start your day with planning to maximize productivity!</p>
+        </div>
+    </div>
+
+    <!-- Contact Tab -->
+    <div id="EdgeCheck" class="tab-content">
+        <h1>EdgeCheck</h1>
+        <h2>✅ EdgeCheck Insights</h2>
+
+<h3>💪 Top 5 Strengths</h3>
+
+<p>1. You think big, like skyscraper big 🏙</p>
+
+
+<p>2. You plan like a chess grandmaster ♟</p>
+
+
+<p>3. People love you—you’re the office glue</p>
+
+
+<p>4. Data is your best friend—you trust numbers like family 📊</p>
+
+
+<p>5. You adapt faster than a Gen Z on TikTok trends</p>
+
+
+
+<h3>⚠ Top 5 Weaknesses</h3>
+
+<p>1. Details? Sometimes they’re just... tiny distractions 🔍</p>
+
+
+<p>2. Risks make you sweat more than a summer in Chennai</p>
+
+
+<p>3. You sometimes turn decisions into TED Talks 🎤</p>
+
+
+<p>4. Overthinking? Oh, you’ve got a Ph.D. in it</p>
+
+
+<p>5. You occasionally start projects like Netflix shows—lots, but finish few 📺</p>
+
+
+
+<h3>💡 Top 5 Pro Tips</h3>
+
+<p>1. Zoom in once in a while—small steps build big wins 🔎</p>
+
+
+<p>2. Take one bold move—it won’t kill your strategy</p>
+
+
+<p>3. Fewer words, faster wins—set a timer next time ⏱</p>
+
+
+<p>4. Perfect is the enemy of done—hit ‘submit’ already ✅</p>
+
+
+<p>5. Pick one, finish it, and then start the next season</p>
+</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 TriEdge. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            const tabButtons = document.getElementsByClassName("tab-btn");
+
+            // Hide all tab contents
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show selected tab and mark button active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
